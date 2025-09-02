@@ -1,4 +1,4 @@
-package com.educandoweb.curso.entidades;
+package com.educandoweb.course.entities;
 
 import java.io.Serializable;
 
@@ -9,28 +9,28 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "usuario")
-public class Usuario implements Serializable {
+@Table(name = "tb_user")
+public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
+	private String name;
 	private String email;
-	private String telefone;
-	private String senha;
+	private String phone;
+	private String password;
 
-	public Usuario() {
+	public User() {
 	}
 
-	public Usuario(Long id, String nome, String email, String telefone, String senha) {
+	public User(Long id, String name, String email, String phone, String password) {
 		this.id = id;
-		this.nome = nome;
+		this.name = name;
 		this.email = email;
-		this.telefone = telefone;
-		this.senha = senha;
+		this.phone = phone;
+		this.password = password;
 	}
 
 	public Long getId() {
@@ -41,12 +41,12 @@ public class Usuario implements Serializable {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getEmail() {
@@ -57,20 +57,20 @@ public class Usuario implements Serializable {
 		this.email = email;
 	}
 
-	public String getTelefone() {
-		return telefone;
+	public String getPhone() {
+		return phone;
 	}
 
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	public void setTelefone(String phone) {
+		this.phone = phone;
 	}
 
-	public String getSenha() {
-		return senha;
+	public String getPasword() {
+		return password;
 	}
 
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public void setSenha(String password) {
+		this.password = password;
 	}
 
 	@Override
@@ -89,7 +89,7 @@ public class Usuario implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Usuario other = (Usuario) obj;
+		User other = (User) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

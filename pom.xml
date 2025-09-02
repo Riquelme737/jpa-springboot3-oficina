@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.educandoweb</groupId>
-	<artifactId>curso</artifactId>
+	<artifactId>course</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>curso</name>
 	<description>Demo project for Spring Boot</description>
