@@ -79,6 +79,18 @@ public class Product implements Serializable {
 		return categories;
 	}
 
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+	public void setCategories(Set<Category> categories) {
+		this.categories = categories;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
